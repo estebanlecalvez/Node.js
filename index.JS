@@ -32,3 +32,14 @@ infoNotes(notesSur100);
 const calculMoyenne = (notes) => notes.reduce((a, c) => a + c) / notes.length;
 console.log(notes);
 console.log(calculMoyenne(notes));
+
+/**
+ * Calcul de la moyenne sur un tableau de grande taille
+ **/
+let moyenneIterative = (nombres) => nombres.reduce(
+    (moyenneIter,nombre) => ({
+    m : moyenneIter.n * (moyenneIter.m /(moyenneIter.n + 1))
+    + (nombre/(moyenneIter.n + 1)),
+    n : moyenneIter.n +1
+}),{ m : 0, n : 0}).m;
+console.log(moyenneIterative(notes));
