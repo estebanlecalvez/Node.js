@@ -43,3 +43,5 @@ let moyenneIterative = (nombres) => nombres.reduce(
     n : moyenneIter.n +1
 }),{ m : 0, n : 0}).m;
 console.log(moyenneIterative(notes));
+
+
